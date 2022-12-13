@@ -343,7 +343,7 @@ a:hover {
   height: 18em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   color: #003152;
   margin-right: 5em;
   margin-top: auto;
@@ -378,8 +378,6 @@ a:hover {
 .box3 {
   width: 35em;
   height: 45em;
-  display: flex;
-  flex-direction: column;
 }
 
 .mobile {
@@ -398,11 +396,6 @@ a:hover {
   color: #003152;
   text-align: center;
   margin-bottom: 1em;
-}
-
-.box3 form {
-  display: flex;
-  flex-direction: column;
 }
 
 .box3 label {
@@ -479,13 +472,13 @@ input[type="submit"]:hover {
 
 /* MEDIA QUERY */
 
-/* TABLET */
+/* LAPTOP */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   /* navbar */
 
   .navbar {
-    width: 90vw;
+    width: 100vw;
   }
 
   .profile-icons {
@@ -500,7 +493,7 @@ input[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 90vw;
+    width: 100vw;
   }
 
   .about-box {
@@ -545,7 +538,7 @@ input[type="submit"]:hover {
   /* WORK SECTION */
 
   .work-box {
-    width: 90vw;
+    width: 100vw;
   }
   .work-title h2 {
     font-size: 4em;
@@ -566,7 +559,7 @@ input[type="submit"]:hover {
   /* SKILLS SECTION */
 
   .skills-box {
-    width: 90vw;
+    width: 100vw;
   }
 
   .skills-container {
@@ -596,12 +589,12 @@ input[type="submit"]:hover {
   /* CONTACTS */
 
   .contacts-box {
-    width: 90vw;
+    width: 100vw;
   }
 
   .box2 {
-    width: 15em;
-    margin-left: 0.5em;
+    width: 20em;
+    margin-left: 1.5em;
   }
 
   .box2 h3 {
@@ -617,22 +610,22 @@ input[type="submit"]:hover {
   }
 
   .box3 {
-    width: 18em;
+    width: 25em;
     margin-right: 2em;
   }
 
   .footer {
-    width: 90vw;
+    width: 100vw;
   }
 }
 
-/* Wide mobile */
+/* TABLET */
 
-@media screen and (max-width: 480px) {
-  /* NAVBAR */
+@media screen and (max-width: 768px) {
+  /* navbar */
 
   .navbar {
-    width: 225vw;
+    width: 100vw;
   }
 
   .profile-icons {
@@ -646,68 +639,88 @@ input[type="submit"]:hover {
   .about {
     display: flex;
     flex-direction: column;
-    width: 225vw;
+    justify-content: flex-start;
+    width: 100vw;
   }
+
   .about-box {
-    width: 60em;
-    height: 115vh;
+    width: 65vw;
+    height: 45vh;
     margin-top: 3em;
   }
+
+  .about-content {
+    margin-top: 2em;
+  }
+
   .about-content h2 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
+
   .about-content > p:first-of-type {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
+
   .about-content p {
-    font-size: 1.6em;
+    font-size: 1em;
   }
+
   .pic {
-    width: 12em;
-    height: 12em;
-    margin-bottom: 1em;
+    width: 20em;
+    height: 20em;
+    margin-bottom: 3em;
+    margin-top: 3em;
   }
+
   .quote {
     width: 30px;
     height: 30px;
   }
+
   .quotedown {
     width: 30px;
     height: 30px;
   }
+
   /* WORK SECTION */
+
   .work-box {
-    width: 225vw;
+    width: 100vw;
   }
   .work-title h2 {
-    font-size: 5em;
+    font-size: 4em;
+    margin-right: 0.5em;
   }
   .history-title h2 {
-    font-size: 5em;
+    font-size: 4em;
+    margin-left: 0.5em;
   }
   .box-cv {
-    width: 12em;
-    height: 12em;
-    margin-top: 0.5em;
+    width: 10em;
+    height: 10em;
   }
   .box-cv img {
-    width: 8em;
-    height: 8em;
+    width: 6.5em;
+    height: 6.5em;
   }
   /* SKILLS SECTION */
+
   .skills-box {
-    width: 225vw;
+    width: 100vw;
   }
+
   .skills-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 75%;
+    height: 100%;
   }
+
   .logo {
     width: 3em;
     height: 3em;
   }
+
   .skills-content {
     font-size: 0.9em;
     width: 40em;
@@ -715,27 +728,213 @@ input[type="submit"]:hover {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
+
   .box1 p {
     margin-bottom: 0.5em;
   }
-  /* CONTACTS SECTION */
+
+  /* CONTACTS */
+
   .contacts-box {
-    width: 225vw;
-    height: 100vh;
+    width: 100vw;
   }
+
   .box2 {
-    margin-left: 1em;
-    height: 23em;
+    width: 20em;
+    margin-left: 1.5em;
   }
-  .box2 .box3 {
-    margin-top: 2em;
+
+  .box2 h3 {
+    font-size: 1.5em;
+  }
+
+  .box2 p {
+    font-size: 1em;
+  }
+
+  .box3 h3 {
+    font-size: 1.5em;
   }
 
   .box3 {
-    width: 30em;
+    width: 25em;
+    margin-right: 2em;
   }
-  /* FOOTER */
+
   .footer {
-    width: 225vw;
+    width: 100vw;
+  }
+}
+
+/* Wide mobile */
+
+@media screen and (max-width: 480px) {
+  /* NAVBAR */
+
+  .navbar {
+    width: 100vw;
+  }
+
+  li a {
+    font-size: 0.7em;
+    padding: 0.7em;
+  }
+
+  .profile-icons {
+    margin-right: 0.5em;
+  }
+
+  .icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  .brand-logo {
+    width: 1em;
+  }
+  /* ABOUT SECTION */
+  .about {
+    width: 100vw;
+  }
+  .about-box {
+    width: 25em;
+    height: 50vh;
+  }
+
+  .about-content {
+  }
+  .about-content h2 {
+    font-size: 1.5em;
+  }
+  .about-content > p:first-of-type {
+    font-size: 1em;
+  }
+  .about-content p {
+    font-size: 0.7em;
+  }
+  .pic {
+    width: 8em;
+    height: 8em;
+  }
+  .quote {
+    width: 15px;
+    height: 15px;
+  }
+  .quotedown {
+    width: 15px;
+    height: 15px;
+  }
+  /* WORK SECTION */
+  .work-box {
+    width: 100vw;
+  }
+  .work-title h2 {
+    font-size: 2.8em;
+  }
+  .history-title h2 {
+    font-size: 2.8em;
+  }
+  .box-cv {
+    width: 9em;
+    height: 9em;
+    margin-top: 0.5em;
+  }
+  .box-cv img {
+    width: 6em;
+    height: 6em;
+  }
+  /* SKILLS SECTION */
+  .skills-box {
+    width: 100vw;
+  }
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    height: 30em;
+  }
+  .logo {
+    width: 2em;
+    height: 2em;
+    margin-bottom: 1em;
+  }
+
+  .box1 p {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+
+  .box1 {
+    width: 30em;
+    height: 25em;
+  }
+  /* CONTACTS SECTION */
+  .contacts-box {
+    width: 100vw;
+    display: flex;
+  }
+
+  .box2 {
+    width: 25em;
+    height: 15em;
+  }
+
+  .box2 h3 {
+    font-size: 1em;
+  }
+
+  .box2 p {
+    font-size: 1em;
+  }
+
+  .box2 h4 {
+    font-size: 1m;
+  }
+
+  .box3 h3 {
+    font-size: 0.8em;
+  }
+
+  .box3 label {
+    font-size: 0.8em;
+  }
+
+  .box3 {
+    width: 35em;
+    height: 30em;
+    margin-right: 2em;
+  }
+
+  input[type="text"] {
+    width: 25vw;
+    padding: 4px 8px;
+    margin: 5px 0;
+  }
+
+  input[type="email"] {
+    width: 25vw;
+    padding: 4px 8px;
+    margin: 2px 0;
+  }
+
+  textarea {
+    width: 25vw;
+    padding: 4px 8px;
+    margin: 2px 0;
+    font-size: 0.8em;
+  }
+
+  input[type="submit"] {
+    width: 25vw;
+    background-color: #624cab;
+    color: #fffbf6;
+    padding: 4px 8px;
+    margin: 2px 0;
+  }
+
+  /* Footer */
+
+  .footer {
+    width: 100vw;
   }
 }
