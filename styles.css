@@ -1,0 +1,741 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+@font-face {
+  font-family: "public";
+  src: url(fonts/Public_Sans/PublicSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "playfair";
+  src: url(fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(fonts/Roboto/Roboto-MediumItalic.ttf);
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+  grid-template: 15% 20% 20% 20% 20% 5%;
+  grid-template-areas:
+    "nav"
+    "about"
+    "work"
+    "skills"
+    "contacts"
+    "footer";
+}
+
+.grid-item {
+  width: 100%;
+}
+
+.navigation {
+  grid-area: nav;
+  min-height: 5vh;
+  width: 100%;
+}
+
+.about1 {
+  grid-area: about;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.work1 {
+  grid-area: work;
+  min-height: 50vh;
+  width: 100%;
+}
+
+.skills1 {
+  grid-area: skills;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.contacts1 {
+  grid-area: contacts;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.footer1 {
+  grid-area: footer;
+  min-height: 5vh;
+  width: 100%;
+}
+
+/* ITEM-1 NAVIGATION BAR */
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #b9bfff;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+}
+
+.brand-logo {
+  width: 2em;
+  margin-left: 0.5em;
+}
+.brand-logo:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+}
+li a {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: public;
+  font-weight: bold;
+  color: #003152;
+}
+
+a:hover {
+  color: #fffbf6;
+  transition: 0.3s;
+}
+
+.profile-icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 0.5em;
+}
+
+.icon {
+  width: 2em;
+  height: 2em;
+  margin-right: 1em;
+}
+
+.icon:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+/* ITEM-2 ABOUT SECTION */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 49, 82);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 49, 82, 1) 50%,
+    rgba(0, 0, 51, 1) 100%
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-box {
+  width: 40%;
+  min-height: 30vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 2em;
+  padding: 1em;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #fffbf6;
+  margin: 1em;
+  padding: 0.5em;
+  font-family: roboto;
+}
+
+.quote {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 2em;
+}
+
+.quotedown {
+  width: 75px;
+  height: 75px;
+  align-self: flex-end;
+}
+
+.about-content h2 {
+  margin-bottom: 0.5em;
+  font-size: 3.5em;
+}
+
+.about-content > p:first-of-type {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-size: 1.75em;
+}
+
+.about-content > p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.pic {
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+  padding: 0.5em;
+}
+
+/* for navbar */
+
+/* ITEM-3 WORK SECTION */
+
+.work-box {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  background-color: #b9bfff;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+}
+.work-title h2 {
+  color: #003152;
+  font-size: 6em;
+  font-family: playfair;
+  margin-right: 0.3em;
+}
+
+.history-title h2 {
+  color: #003152;
+  font-size: 6em;
+  font-family: playfair;
+  margin-left: 0.3em;
+}
+
+/* Linkedin logo link */
+
+.box-cv {
+  background-color: #fffbf6;
+  width: 14em;
+  height: 14em;
+  border-radius: 2em;
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxhover:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+}
+
+.box-cv img {
+  width: 150px;
+  height: 150px;
+}
+
+/* ITEM-4 SKILLS SECTION */
+
+.skills-box {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 49, 82);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 49, 82, 1) 50%,
+    rgba(0, 0, 51, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-container {
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-content {
+  width: 30em;
+  height: 30em;
+  margin: 2em;
+  padding-top: 2em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box1 p {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 2em;
+  margin-right: 0.5em;
+}
+
+.skills-content p {
+  text-transform: uppercase;
+  font-family: roboto;
+  color: #fffbf6;
+  font-size: 1.5em;
+  margin-right: 0.75em;
+}
+
+/* ITEM-5 CONTACT SECTION */
+
+.contacts-box {
+  width: 100%;
+  height: 80vh;
+  background-color: #b9bfff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-container {
+  display: flex;
+  margin-top: 1em;
+}
+
+.contact-container div {
+  margin: 0.5em;
+}
+
+/*  Connect with me box */
+.box2 {
+  width: 22em;
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #003152;
+  margin-right: 5em;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.box2 img {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5em;
+}
+
+.box2 h3 {
+  font-size: 2em;
+  font-family: playfair;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.box2 h4 {
+  font-size: 1.2em;
+}
+
+.box2 p {
+  font-size: 20px;
+}
+
+/* Send a message box */
+
+.box3 {
+  width: 35em;
+  height: 45em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile {
+  display: flex;
+  align-items: center;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+}
+
+.box3 h3 {
+  font-size: 2em;
+  font-family: playfair;
+  color: #003152;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.box3 form {
+  display: flex;
+  flex-direction: column;
+}
+
+.box3 label {
+  font-size: 1.2em;
+  font-weight: bolder;
+  font-family: public;
+  color: #003152;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: public;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #624cab;
+  color: #fffbf6;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #003152;
+  color: #fffbf6;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  background: rgb(0, 49, 82);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 49, 82, 1) 50%,
+    rgba(0, 0, 51, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+.footer span {
+  color: #fffbf6;
+  font-family: public;
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+}
+
+/* MEDIA QUERY */
+
+/* TABLET */
+
+@media screen and (max-width: 768px) {
+  /* navbar */
+
+  .navbar {
+    width: 90vw;
+  }
+
+  .profile-icons {
+    margin-right: 1.2em;
+  }
+
+  .brand-logo {
+    width: 1.4em;
+  }
+  /* ABOUT SECTION */
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90vw;
+  }
+
+  .about-box {
+    width: 65vw;
+    height: 45vh;
+    margin-top: 3em;
+  }
+
+  .about-content {
+    margin-top: 2em;
+  }
+
+  .about-content h2 {
+    font-size: 2em;
+  }
+
+  .about-content > p:first-of-type {
+    font-size: 1.5em;
+  }
+
+  .about-content p {
+    font-size: 1em;
+  }
+
+  .pic {
+    width: 20em;
+    height: 20em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
+
+  .quote {
+    width: 30px;
+    height: 30px;
+  }
+
+  .quotedown {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* WORK SECTION */
+
+  .work-box {
+    width: 90vw;
+  }
+  .work-title h2 {
+    font-size: 4em;
+    margin-right: 0.5em;
+  }
+  .history-title h2 {
+    font-size: 4em;
+    margin-left: 0.5em;
+  }
+  .box-cv {
+    width: 10em;
+    height: 10em;
+  }
+  .box-cv img {
+    width: 6.5em;
+    height: 6.5em;
+  }
+  /* SKILLS SECTION */
+
+  .skills-box {
+    width: 90vw;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    width: 3em;
+    height: 3em;
+  }
+
+  .skills-content {
+    font-size: 0.9em;
+    width: 40em;
+    height: 18em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .box1 p {
+    margin-bottom: 0.5em;
+  }
+
+  /* CONTACTS */
+
+  .contacts-box {
+    width: 90vw;
+  }
+
+  .box2 {
+    width: 15em;
+    margin-left: 0.5em;
+  }
+
+  .box2 h3 {
+    font-size: 1.5em;
+  }
+
+  .box2 p {
+    font-size: 1em;
+  }
+
+  .box3 h3 {
+    font-size: 1.5em;
+  }
+
+  .box3 {
+    width: 18em;
+    margin-right: 2em;
+  }
+
+  .footer {
+    width: 90vw;
+  }
+}
+
+/* Wide mobile */
+
+@media screen and (max-width: 480px) {
+  /* NAVBAR */
+
+  .navbar {
+    width: 225vw;
+  }
+
+  .profile-icons {
+    margin-right: 1.2em;
+  }
+
+  .brand-logo {
+    width: 1.4em;
+  }
+  /* ABOUT SECTION */
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 225vw;
+  }
+  .about-box {
+    width: 60em;
+    height: 115vh;
+    margin-top: 3em;
+  }
+  .about-content h2 {
+    font-size: 2.5em;
+  }
+  .about-content > p:first-of-type {
+    font-size: 1.8em;
+  }
+  .about-content p {
+    font-size: 1.6em;
+  }
+  .pic {
+    width: 12em;
+    height: 12em;
+    margin-bottom: 1em;
+  }
+  .quote {
+    width: 30px;
+    height: 30px;
+  }
+  .quotedown {
+    width: 30px;
+    height: 30px;
+  }
+  /* WORK SECTION */
+  .work-box {
+    width: 225vw;
+  }
+  .work-title h2 {
+    font-size: 5em;
+  }
+  .history-title h2 {
+    font-size: 5em;
+  }
+  .box-cv {
+    width: 12em;
+    height: 12em;
+    margin-top: 0.5em;
+  }
+  .box-cv img {
+    width: 8em;
+    height: 8em;
+  }
+  /* SKILLS SECTION */
+  .skills-box {
+    width: 225vw;
+  }
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 75%;
+  }
+  .logo {
+    width: 3em;
+    height: 3em;
+  }
+  .skills-content {
+    font-size: 0.9em;
+    width: 40em;
+    height: 18em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .box1 p {
+    margin-bottom: 0.5em;
+  }
+  /* CONTACTS SECTION */
+  .contacts-box {
+    width: 225vw;
+    height: 100vh;
+  }
+  .box2 {
+    margin-left: 1em;
+    height: 23em;
+  }
+  .box2 .box3 {
+    margin-top: 2em;
+  }
+
+  .box3 {
+    width: 30em;
+  }
+  /* FOOTER */
+  .footer {
+    width: 225vw;
+  }
+}
